@@ -7,7 +7,21 @@
     </title>
     <meta charset="utf-8">
     <style type="text/css">
-        h1 {color:bisque}
+        h1 {color:rgb(207, 127, 29)}
+        body{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align:center; 
+            background-color: #000;
+            /*background-image:url(https://img6.bdstatic.com/img/image/pcindex/sunjunpchuazhoutu.JPG);*/
+            background: url(https://cdn.pixabay.com/photo/2019/01/22/15/26/blood-moon-3948370_1280.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            -webkit-background-size: cover;
+            -o-background-size: cover;                
+            background-size: cover;       
+	    }
     </style>
 </head>
 
@@ -19,8 +33,8 @@
         春江潮水连海平，海上明月共潮生……
     </p>
     <form action="test_form_1.php" method="post/get">
-        <input type="text" name="username"><br>
-        <input type="password" name="password"><br>
+        <input type="text" name="username" maxlength="10"><br><br>
+        <input type="password" name="password"><br><br>
         <input type="submit">
     </form>
 </body>

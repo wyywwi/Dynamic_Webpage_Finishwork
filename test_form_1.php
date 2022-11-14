@@ -9,8 +9,12 @@
     处理表单测试
     -->
     <?php
-        echo "Hello World!", "<br><br>";
-        echo "Hello, $_GET[username]!";
+        for($i = 0; $i <5; $i++){
+            echo "$i&nbsp&nbsp&nbsp";
+            echo "Hello World!", "<br><br>";
+            echo "Hello, $_GET[username]!<br><br>";
+        }
     ?>
+    <a href="GNU-License.html">Know more ...</a>
     </body>
 </html>
