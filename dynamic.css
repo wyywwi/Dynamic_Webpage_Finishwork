@@ -1,0 +1,36 @@
+h1 {color:rgb(207, 127, 29)}
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align:center; 
+    background-color: #000;
+    /*background-image:url(https://img6.bdstatic.com/img/image/pcindex/sunjunpchuazhoutu.JPG);*/
+    background: url(https://cdn.pixabay.com/photo/2019/01/22/15/26/blood-moon-3948370_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-background-size: cover;
+    -o-background-size: cover;                
+    background-size: cover;       
+}
+/*文本内容*/
+.content{
+    /*position:relative;
+    vertical-align:middle;*/
+}
+/*input美化*/
+.inputText{
+    width: 300px;
+    height: 30px;
+    line-height: 20px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 30px;
+    border-radius: 15px;
+    background-color: gainsboro;
+    border: none;
+}
+.inputText:focus{
+    outline: none;
+    background-color: lightblue;
+}
