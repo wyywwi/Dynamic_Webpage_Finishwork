@@ -12,7 +12,7 @@
         for($i = 0; $i <5; $i++){
             echo "$i&nbsp&nbsp&nbsp";
             echo "Hello World!", "<br><br>";
-            echo "Hello, $_GET[username]!<br><br>";
+            echo "Hello, $_POST[username]!<br><br>";
         }
     ?>
     <a href="GNU-License.html">Know more ...</a>
