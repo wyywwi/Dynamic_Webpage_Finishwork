@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <head>
     <title>
-        测试页面一 &nbsp;
-        什么都不会 &nbsp;
-        寄了捏 &nbsp;
+        起始页
     </title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="dynamic.css">
+    <script src="testaction.js"></script>
 </head>
 
 <body>
@@ -17,10 +16,17 @@
     <p>
         <span class="content_1">春江潮水连海平，海上明月共潮生……</span>
     </p>
-    <form action="test_form_1.php" method="post">
-        <input class="inputText" type="text" name="username" placeholder="用户名" maxlength="10"><br><br>
-        <input class="inputText" type="password" name="password" placeholder="密码"><br><br>
-        <input class="submitButton" type="submit" value="确认">
-    </form>
 </div>
+    <form action="test_form_1.php" method="post">
+    <span class="inputCenter">
+        <input class="inputText" type="text" name="username" placeholder="用户名" maxlength="10">
+        &nbsp;<button class="littleButton" type="reset">重&nbsp;&nbsp;置</button><br><br>
+    </span>
+    <span class="inputCenter">
+        <input class="inputText" type="password" id="pswdinput" name="password" placeholder="密码">
+        &nbsp;<button type="button" class="littleButton" id="pswdvis" onclick="pswdvisible()">可&nbsp;&nbsp;见</button><br><br>
+    </span>
+        <input class="bigButton" type="submit" value="确&nbsp;&nbsp;认">&nbsp;&nbsp;
+        <input class="bigButton" type="button" id="chpassword" onclick='window.open("https:\/\/www.baidu.com/s?wd=%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E6%80%8E%E4%B9%88%E5%8A%9E")' value="忘记密码">
+    </form>
 </body>

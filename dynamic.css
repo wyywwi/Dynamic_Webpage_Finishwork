@@ -1,3 +1,7 @@
+title:focus{
+    outline: none;
+    background-color: lightblue;
+}
 body{
     position: relative;
     width: 100%;
@@ -40,10 +44,13 @@ body{
     outline: none;
     background-color: lightblue;
 }
+.inputCenter{
+    position:relative;
+    margin:auto;
+    left:40px;
+}
 /*按钮美化*/
-.submitButton {
-    /* 文字颜色 */
-    color: #0099CC; 
+.bigButton {
     /* 清除背景色 */
     background: transparent; 
     /* 边框样式、颜色、宽度 */
@@ -66,8 +73,38 @@ body{
     font-family: "仿宋";
 }
 /* 悬停样式 */
-.submitButton:hover {
+.bigButton:hover {
     background-color: rgba(250, 225, 188, 0.5);/*rgba: 设置半透明色*/
     color: white;
     /*opacity: 0.5;/*全局半透明*/
+}
+
+.littleButton{
+    background: transparent; 
+    border: 2px solid;
+    /* 给边框添加圆角 */
+    border-radius: 6px; 
+    /* 字母转大写 */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "仿宋";
+}
+.littleButton:hover {
+    background-color: rgba(250, 225, 188, 0.5);/*rgba: 设置半透明色*/
+    color: white;
+    /*opacity: 0.5;/*全局半透明*/
+}
+.littlebuttonfocus{
+    background-color: rgba(250, 225, 188, 1);/*rgba: 设置点击时不透明*/
+    color: white;
 }
