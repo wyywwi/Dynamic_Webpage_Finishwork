@@ -10,14 +10,19 @@
     <title>
         二零二二年九月
     </title>
-    <link rel="stylesheet" type="text/css" href="problem-1.css">
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="sakura.css">
+    <link rel="stylesheet" type="text/css" href="problem-1.css">
+    <script src="problem_1_action.js"></script>
 </head>
 <body>
-    <h1>九月</h1>
+    <header>
+        <button id="background_switch_button" onclick="ChangeBackground_9()">深色</button>
+        <span id="main_header">华中大月历</span>
+    </header>
+    <h1 class="monthname">九月</h1>
     <p class="quote">可怜九月初三夜，露似真珠月似弓</p>
-    <table>
+    <table class="monthtable">
         <thead>
             <tr>
                 <th>星期一</th>

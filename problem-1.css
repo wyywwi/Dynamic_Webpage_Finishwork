@@ -18,6 +18,33 @@ ol, ul { list-style: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
 */
-
+header{
+  text-align: center;
+}
+#main_header{
+  text-align: center;
+  font-family: 楷体;
+  font-size: larger;
+}
+#background_switch_button{
+  float:left;
+  margin:0px;
+  border: 0px;
+  padding: 5px 12px;
+  background-color: rgb(133, 159, 100);
+  border-radius: 4px;
+  font-family: 楷体;
+  font-size: smaller;
+}
+#background_switch_button:hover{
+  float:left;
+  margin:0px;
+  border: 0px;
+  padding: 5px 12px;
+  background-color: rgb(100, 117, 76);
+  border-radius: 4px;
+  font-family: 楷体;
+  font-size: smaller;
+}
 
 
