@@ -12,17 +12,22 @@
     </title>
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="sakura.css">
+    <!--sakura.css, using MIT License-->
     <link rel="stylesheet" type="text/css" href="problem-1.css">
+    <!--personal css stylesheet-->
     <script src="problem_1_action.js"></script>
 </head>
 <body>
+    <script id="canvas_9" color="75,76,20" opacity='0.8' zIndex="-2" count="99" src="http://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
     <header>
         <button id="background_switch_button" onclick="ChangeBackground_9()">深色</button>
         <span id="main_header">华中大月历</span>
+        <button id="lastmonth_9" onclick="ChangeBackground_9()">上一月</button>
+        <button id="nextmonth_9" onclick="ChangeBackground_9()">下一月</button>
     </header>
-    <h1 class="monthname">九月</h1>
-    <p class="quote">可怜九月初三夜，露似真珠月似弓</p>
-    <table class="monthtable">
+    <h1 id="monthname_9">九月</h1>
+    <p id="quote_9">可怜九月初三夜，露似真珠月似弓</p>
+    <table id="monthtable_9">
         <thead>
             <tr>
                 <th>星期一</th>
@@ -52,4 +57,5 @@
             <?php } ?>
         </tbody>
     </table>
+    <?php for($i = 0; $i < 100; $i ++) {echo "$i<br>";} ?>
 </body>

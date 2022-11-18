@@ -20,6 +20,7 @@ img { border: 0; max-width: 100%; }
 */
 header{
   text-align: center;
+  position:relative;
 }
 #main_header{
   text-align: center;
@@ -39,6 +40,27 @@ header{
 #background_switch_button:hover{
   float:left;
   margin:0px;
+  border: 0px;
+  padding: 5px 12px;
+  background-color: rgb(100, 117, 76);
+  border-radius: 4px;
+  font-family: 楷体;
+  font-size: smaller;
+}
+
+#nextmonth_9, #lastmonth_9{
+  float:right;
+  margin:2px;
+  border: 0px;
+  padding: 5px 12px;
+  background-color: rgb(133, 159, 100);
+  border-radius: 4px;
+  font-family: 楷体;
+  font-size: smaller;
+}
+#nextmonth_9:hover, #lastmonth_9:hover{
+  float:right;
+  margin:2px;
   border: 0px;
   padding: 5px 12px;
   background-color: rgb(100, 117, 76);
