@@ -27,7 +27,7 @@ header{
   font-family: 楷体;
   font-size: larger;
 }
-#background_switch_button{
+#background_switch_button_8, #background_switch_button_9, #background_switch_button_10{
   float:left;
   margin:0px;
   border: 0px;
@@ -37,7 +37,7 @@ header{
   font-family: 楷体;
   font-size: smaller;
 }
-#background_switch_button:hover{
+#background_switch_button_8:hover, #background_switch_button_9:hover, #background_switch_button_10:hover{
   float:left;
   margin:0px;
   border: 0px;
@@ -48,7 +48,9 @@ header{
   font-size: smaller;
 }
 
-#nextmonth_9, #lastmonth_9{
+#nextmonth_8, #lastmonth_8, 
+#nextmonth_9, #lastmonth_9, 
+#nextmonth_10, #lastmonth_10{
   float:right;
   margin:2px;
   border: 0px;
@@ -58,7 +60,9 @@ header{
   font-family: 楷体;
   font-size: smaller;
 }
-#nextmonth_9:hover, #lastmonth_9:hover{
+#nextmonth_8:hover, #lastmonth_8:hover, 
+#nextmonth_9:hover, #lastmonth_9:hover, 
+#nextmonth_10:hover, #lastmonth_10:hover{
   float:right;
   margin:2px;
   border: 0px;
@@ -67,6 +71,20 @@ header{
   border-radius: 4px;
   font-family: 楷体;
   font-size: smaller;
+}
+
+.bottomtab{
+  margin: auto;
+  font-size: small;
+  color: rgb(56, 56, 56);
+  position: fixed;
+  /*绝对位置模式下居中：给元素确定大小，再给确定位置*/
+  right: 0;
+  left: 0;
+  /* top: 0; */
+  bottom: 0;
+  width: 200px;
+  height: 50px;
 }
 
 
