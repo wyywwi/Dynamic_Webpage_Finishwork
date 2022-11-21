@@ -17,7 +17,24 @@
         <button>留言板</button>
         <button style="float:right">日线图分析</button>
     </p>
-    <p style="text-align: left; margin-top: 10%; max-width: 32em;">
-        <img src="https://ts1.cn.mm.bing.net/th?id=OIP-C.23pA2I8-dxyYTLRcR2b9-QAAAA&w=155&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="梧桐一叶">
+    <p id="img_para" style="text-align: right; margin-top: 5%; max-width: 38em;">
+        <img id="illustration" src="./sources/zero.png" style="max-width: 24em;" alt="梧桐一叶">
     </p>
+    <script>
+        //放在尾部引入方能改变图片
+        let time = new Date();
+        let random = time.getMilliseconds();
+        let image = document.getElementById("illustration");
+        let image_para = document.getElementById("img_para");
+        if( random % 3 == 1){
+            image.src = "./sources/Camellia.png";
+        }
+        else if( random % 3 == 2){
+            image_para.style.textAlign = "left";
+            image.src = "./sources/Chrysanthemum.png";
+        }
+        else{
+            image.src = "./sources/Sycamore_leaves.png";
+        }
+    </script>
 </body>
