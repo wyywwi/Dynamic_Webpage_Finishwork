@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "wyywwi";
-$password = "wyysql";
+$username = "root";
+$password = "zfyang";
  
 // 创建连接
 $conn = new mysqli($servername, $username, $password);
@@ -15,12 +15,12 @@ echo "连接成功";
 echo "<br>";
 
 // 创建数据库
-$sql = "CREATE DATABASE myDB";
+$sql = "use myDB";
 if ($conn->query($sql) === TRUE) {
-    echo "数据库创建成功";
+    echo "数据库进入成功";
 } else {
     echo "Error creating database: " . $conn->error;
 }
- 
-$conn->close();
+$sql = "insert into mytable values ('qr','2012-01-02','qr','qr','qr')";
+mysqli_query($conn,$sql);
 ?>
