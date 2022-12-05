@@ -13,7 +13,7 @@ while($array_now = mysqli_fetch_array($stdata)){
     $vol[$i] = $array_now["vm"];
     $i++;
 }
-$imgwidth = 8000;
+$imgwidth =8800;
 $imgheight = 500;
 $upperpart = 400;
 
@@ -44,7 +44,6 @@ for($i=$startpt; $i<$total; $i++)
 {
 
     $yop[$i]=intval($upperpart-$ky*($op[$i]-$belowest));
-
     $ycl[$i]=intval($upperpart-$ky*($cl[$i]-$belowest));
     $yh[$i]=intval($upperpart-$ky*( $h[$i]-$belowest));
     $yl[$i]=intval($upperpart-$ky*( $l[$i]-$belowest));

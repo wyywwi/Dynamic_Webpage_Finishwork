@@ -1,0 +1,13 @@
+use mydb;
+
+create table s600105 (
+number int,
+dt date,
+pop FLOAT(8,2),
+ph FLOAT(8,2),
+pl FLOAT(8,2),
+pcl FLOAT(8,2),
+vm int
+);
+
+load data local infile './sh600000.txt' into table sh600000 fields terminated by ',' lines terminated by '\n' ;
