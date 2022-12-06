@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36657379-b9a7-490b-a56c-5d22c2235190" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/crypter/makedb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crypter/makedb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,16 +27,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/zfyang/Documents/文件/php/Dynamic_Webpage_Finishwork",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zfyang/Documents/文件/php/Dynamic_Webpage_Finishwork&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -50,7 +50,10 @@
       <workItem from="1669296015971" duration="3599000" />
       <workItem from="1669338142426" duration="5000" />
       <workItem from="1669338184404" duration="269000" />
-      <workItem from="1669339521115" duration="10004000" />
+      <workItem from="1669339521115" duration="11517000" />
+      <workItem from="1669941652391" duration="153000" />
+      <workItem from="1670199442304" duration="37000" />
+      <workItem from="1670200924236" duration="15000" />
     </task>
     <servers />
   </component>

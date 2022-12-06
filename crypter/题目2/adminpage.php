@@ -2,8 +2,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Crypeter's Adminpage</title>
-	<link rel="stylesheet" type="text/css" href="../normalize.css">
-    <link rel="stylesheet" type="text/css" href="../sakura.css">
+	<link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../sakura.css">
 </head>
 <body>
 <meta charset="utf-8">

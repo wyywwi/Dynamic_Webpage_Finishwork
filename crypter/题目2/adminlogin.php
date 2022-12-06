@@ -2,8 +2,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Crypeter's Login</title>
-	<link rel="stylesheet" type="text/css" href="../normalize.css">
-    <link rel="stylesheet" type="text/css" href="../sakura.css">
+	<link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../sakura.css">
 </head>
 <body>
 <center><h2>管理员寻人寻物信息表</h2></center>
