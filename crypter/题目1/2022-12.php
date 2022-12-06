@@ -6,7 +6,7 @@
     <title>十二月月历.php</title>
     <style>
         table{
-            margin: 20px auto；
+            margin: 20px auto;
             width:500px;
             border:0px;
         }
@@ -18,10 +18,12 @@
     </style>
 </head>
 <body background="十二月背景图.png">
+<div style="text-align:center">
 <a href = "./2022-1.php">一月月历</a>
 <b>------------------------------------------</b>
 <a href = "./2022-7.php">七月日历</a>
 <br>
+</div>
 <?php
 $h=date_default_timezone_set("PRC");
 header("Content-Type:text/html;charset=UTF-8");

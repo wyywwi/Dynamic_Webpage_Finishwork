@@ -6,9 +6,9 @@
     <title>一月月历.php</title>
     <style type="text/css">
         table{
-            margin: 20px auto；
-            width:500px;
-            border:0px;
+            margin: 20px auto;
+            width: 500px;
+            border: 0px;
         }
         th,td{
             width:50px;
@@ -19,10 +19,12 @@
 </head>
 <font color="#f0ffff">
 <body background="一月背景图.png">
+<div style="text-align:center">
 <a href = "./2022-7.php">七月月历</a>
 <b>------------------------------------------</b>
 <a href = "./2022-12.php">十二月日历</a>
 <br>
+</div>
 <?php
 $h=date_default_timezone_set("PRC");
 header("Content-Type:text/html;charset=UTF-8");
@@ -64,6 +66,6 @@ for ($i=1;$i<=$days;$i++){
 }
 echo '</table>';
 ?>
-</font>
 </body>
+</font>
 </html>
