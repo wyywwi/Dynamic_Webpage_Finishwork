@@ -2,6 +2,7 @@
 $conn = mysqli_connect("localhost",'root','zfyang');
 mysqli_options($conn, MYSQLI_OPT_LOCAL_INFILE, true);
 $com = mysqli_query($conn,"use mydb");
+$com2 = mysqli_query($conn,"load data local infile 'sh600000.txt' into table sh600000 fields terminated by ',' lines terminated by '\n' ;");
 $stdata = mysqli_query($conn,"select * from sh600000 order by dt");
 $total = mysqli_num_rows($stdata);
 $i = 0;
@@ -12,6 +13,22 @@ while($array_now = mysqli_fetch_array($stdata)){
     $cl[$i] = $array_now["pcl"];
     $vol[$i] = $array_now["vm"];
     $i++;
+}
+
+//寻找10日最大函数
+function Find_Max_10_Days($day,&$h){
+    $count = 5;
+    $max = 0;
+    while($count > 0 && $day > 0){
+        if($h[$day-$count] > $max)$max = $h[$day-$count];
+        $count--;
+    }
+    $count = 4;
+    while( $day < 682 && $count >=0){
+        if($h[$day + $count] > $max)$max = $h[$day-$count];
+        $count--;
+    }
+    return $max;
 }
 $imgwidth =8800;
 $imgheight = 500;
@@ -49,6 +66,7 @@ for($i=$startpt; $i<$total; $i++)
     $yl[$i]=intval($upperpart-$ky*( $l[$i]-$belowest));
     $yv[$i]=intval($imgheight - 100* $vol[$i]/$volmax);
 }
+
 
 Header("Content-Type: image/gif");
 $p=imagecreate($imgwidth,$imgheight);
