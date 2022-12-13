@@ -8,8 +8,8 @@
 <body>
 <center><h2>每日留言人数统计表</h2></center>
 <?php
-$conn = mysqli_connect('localhost','root','zfyang');
-mysqli_query($conn,"use mydb");
+$conn = mysqli_connect("localhost",'DynamicFinishWork','dynamic');
+mysqli_query($conn,"use dynamic_zfy");
 $sum=mysqli_query($conn,"SELECT day,count(day) from mytable GROUP by day HAVING COUNT(day) order by day");
 while($sumnow = mysqli_fetch_array($sum)){
     echo $sumnow['day'];

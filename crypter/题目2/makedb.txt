@@ -1,25 +1,25 @@
-create mydb;
-use mydb;
-create table mytable{
+//create mydb;
+//use mydb;
+create table mytable(
     id int not null auto_increment primary key,
-    text name
-    time settime
-    date day
-    text place
-    text email
-    text something
-    text phonenumber
-    text hobby
-}
-create table logintable{
-    text name
-    text password
-}
-insert into logintable (name,password) values('root','zfyang')
-insert into mytable(day,settime,name,place,email,phonenumber,hobby,something) values('卡多克·泽姆露普斯', '2017-12-25', '俄罗斯', '伊凡雷帝', '存活，现重伤昏迷', 'Caster', '安娜斯塔西亚', '02:54:38');
-insert into mytable(day,settime,name,place,email,phonenumber,hobby,something) values('奥菲莉娅·法姆索罗涅', '2017-12-25', '北欧', '斯卡哈·丝卡蒂', '死亡，阻止苏鲁特的时候使用大令咒而死', 'Saber', '齐格鲁德', '02:54:38');
-insert into mytable(day,settime,name,place,email,phonenumber,hobby,something) values('芥雏子', '2017-12-26', '中国', '始皇帝', '回归原本的形态', 'Saber', '齐格鲁德', '02:54:38');
-insert into mytable(day,settime,name,place,email,phonenumber,hobby,something) values('斯堪的纳维亚·佩佩隆奇诺', '2017-12-26', '印度', '阿周那〔Alter〕', '死亡，尝试刺杀贝里尔，但被亚铃百种化的贝里尔反杀', 'Archer', '马嘶', '02:54:38');
-insert into mytable(day,settime,name,place,email,phonenumber,hobby,something) values('基尔什塔利亚·沃戴姆', '2017-12-26', '希腊', '大神宙斯', '死亡，被贝里尔偷袭而身受重伤，后对异星神使用大令咒而死', 'Lancer Saber', '凯妮斯 巨神阿特拉斯', '02:54:38');
-insert into mytable(day,settime,name,place,email,phonenumber,hobby,something) values('贝里尔·伽特', '2017-12-28', '不列颠', '摩根', '本身因为从者摩根改变时间线而死亡，现在的贝里尔是异闻带摩根所制作，因感染莫斯病毒导致身体崩塌精神混乱，与立香玛修交战后死亡', 'Ruler', '摩根', '02:54:38');
-insert into mytable(day,settime,name,place,email,phonenumber,hobby,something) values('戴比特·泽姆·沃伊德', '2017-12-29', '南美', 'unkonwn', '具体状况不明', 'Berserker', '未知冠位从者', '02:54:38');
+    name text,
+    settime text,
+    day date,
+    place text,
+    email text,
+    something text,
+    phonenumber text,
+    hobby text
+);
+create table logintable(
+    name text,
+    password text
+);
+insert into logintable (name,password) values('root','zfyang');
+insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('卡多克·泽姆露普斯', '2017-12-25', '俄罗斯', '伊凡雷帝', '存活，现重伤昏迷', 'Caster', '安娜斯塔西亚', '02:54:38');
+insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('奥菲莉娅·法姆索罗涅', '2017-12-25', '北欧', '斯卡哈·丝卡蒂', '死亡，阻止苏鲁特的时候使用大令咒而死', 'Saber', '齐格鲁德', '02:54:38');
+insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('芥雏子', '2017-12-26', '中国', '始皇帝', '回归原本的形态', 'Saber', '齐格鲁德', '02:54:38');
+insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('斯堪的纳维亚·佩佩隆奇诺', '2017-12-26', '印度', '阿周那〔Alter〕', '死亡，尝试刺杀贝里尔，但被亚铃百种化的贝里尔反杀', 'Archer', '马嘶', '02:54:38');
+insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('基尔什塔利亚·沃戴姆', '2017-12-26', '希腊', '大神宙斯', '死亡，被贝里尔偷袭而身受重伤，后对异星神使用大令咒而死', 'Lancer Saber', '凯妮斯 巨神阿特拉斯', '02:54:38');
+insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('贝里尔·伽特', '2017-12-28', '不列颠', '摩根', '本身因为从者摩根改变时间线而死亡，现在的贝里尔是异闻带摩根所制作，因感染莫斯病毒导致身体崩塌精神混乱，与立香玛修交战后死亡', 'Ruler', '摩根', '02:54:38');
+insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('戴比特·泽姆·沃伊德', '2017-12-29', '南美', 'unkonwn', '具体状况不明', 'Berserker', '未知冠位从者', '02:54:38');

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
@@ -12,8 +13,8 @@
 $loginname = $_POST['loginname'];
 $password = $_POST['password'];
 $ErrorOut = "账号密码错误";
-$conn = mysqli_connect('localhost','root','zfyang');
-mysqli_query($conn,"use mydb");
+$conn = mysqli_connect("localhost",'DynamicFinishWork','dynamic');
+mysqli_query($conn,"use dynamic_zfy");
 $password1 = mysqli_fetch_array(mysqli_query($conn,"select password from logintable where name='$loginname'"));
 if(strcmp($password,$password1['password'])!=0){
     echo $ErrorOut;

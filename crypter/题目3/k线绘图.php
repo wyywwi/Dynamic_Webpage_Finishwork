@@ -1,7 +1,7 @@
 <?php
-$conn = mysqli_connect("localhost",'root','zfyang');
+$conn = mysqli_connect("localhost",'DynamicFinishWork','dynamic');
 mysqli_options($conn, MYSQLI_OPT_LOCAL_INFILE, true);
-$com = mysqli_query($conn,"use mydb");
+$com = mysqli_query($conn,"use dynamic_zfy");
 $com2 = mysqli_query($conn,"load data local infile 'sh600000.txt' into table sh600000 fields terminated by ',' lines terminated by '\n' ;");
 $stdata = mysqli_query($conn,"select * from sh600000 order by dt");
 $total = mysqli_num_rows($stdata);
@@ -15,7 +15,7 @@ while($array_now = mysqli_fetch_array($stdata)){
     $i++;
 }
 
-//Ñ°ÕÒ10ÈÕ×î´óº¯Êý
+//Ñ°ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 function Find_Max_10_Days($day,&$h){
     $count = 5;
     $max = 0;
