@@ -1,0 +1,10 @@
+use dynamic_wyywwi;
+
+create table guestbook(
+    id int not null auto_increment primary key,
+    name text,
+    day date,
+    time text,
+    contact text,
+    content text
+);

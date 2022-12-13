@@ -1,5 +1,7 @@
-//create mydb;
-//use mydb;
+//after using ./makedb.txt
+
+use dynamic_zfy;
+
 create table mytable(
     id int not null auto_increment primary key,
     name text,
@@ -15,6 +17,7 @@ create table logintable(
     name text,
     password text
 );
+
 insert into logintable (name,password) values('root','zfyang');
 insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('卡多克·泽姆露普斯', '2017-12-25', '俄罗斯', '伊凡雷帝', '存活，现重伤昏迷', 'Caster', '安娜斯塔西亚', '02:54:38');
 insert into mytable(settime,day,name,place,email,phonenumber,hobby,something) values('奥菲莉娅·法姆索罗涅', '2017-12-25', '北欧', '斯卡哈·丝卡蒂', '死亡，阻止苏鲁特的时候使用大令咒而死', 'Saber', '齐格鲁德', '02:54:38');

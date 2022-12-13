@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        wyywwi's Guestbook
+    </title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../sakura.css">
+    <link rel="stylesheet" type="text/css" href="problem-2.css">
+</head>
+<body>
+    <header>
+        <!--<span style="text-align:center">留言板</span>-->
+        <!--<button style="text-align:right">管理界面</button>-->
+    </header>
+    <h1>Wyywwi's Guestbook</h1>
+    <br><br>
+    <form method="post" action="guestpost.php">
+        <table>
+            <tr>
+                <td>姓名：</td>
+                <td><input name="guestname" type="text" size="50"></td>
+            </tr>
+            <tr>
+                <td>联系方式：</td>
+                <td><input name="guestinfo" type="text" size="50"></td>
+            </tr>
+            <tr>
+                <td>你的留言：</td>
+                <td><textarea name="guesttext" rows="6" col = "500"></textarea></td>
+            </tr>
+        </table>
+        <button id="submitbutton">提交</button>
+    </form>
+    <br>
+    <button>查看其他留言</button>
+    <br><br>
+    <article>
+        "风吹柳花满店香，吴姬压酒劝客尝"
+    </article>
+    <br><br>
+</body>
