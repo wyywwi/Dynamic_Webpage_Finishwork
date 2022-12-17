@@ -38,12 +38,18 @@ if ($contact == '')
 if ($content == '')
     $content = 'nothing...';
 
+//读取数据库中内容(更新前)
+mysqli_query($conn, "use dynamic_wyywwi");
+$output_sql = "select * from guestbook";
+$other_posts = mysqli_query($conn, $output_sql);
+
 //送入数据库
 if($errorflag == 0){
     mysqli_query($conn, "use dynamic_wyywwi");
     $input_sql = "Insert into guestbook (name,day,time,contact,content) values ('$name','$day','$time','$contact','$content')";
     mysqli_query($conn, $input_sql);
 }
+
 ?>
 
 <html>
@@ -60,45 +66,60 @@ if($errorflag == 0){
         <?php
         if ($errorflag == 2)
             echo "留言成功！（空留言）";
+            //空留言不被记载入数据库
         else
             echo "留言成功！";
         ?>
     </h3>
-    <br><br>
-    <table>
-        <tr>
-            <td>时间</td>
-            <td>
-                <?php
-                    echo $day;
-                    echo "    ";
-                    echo $time;
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td>留言人</td>
-            <td>
-                <?php
-                    echo $name;
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td>联系方式</td>
-            <td>
-                <?php
-                    echo $contact;
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td>留言内容</td>
-            <td>
-                <?php
-                    echo $content;
-                ?>
-            </td>
-        </tr>
-    </table>
+    <div id = "CurrentPost">
+        <table class = "PostLine">
+            <tr>
+                <td class = "shorter_td">时间</td>
+                <td><?php echo $day."    ".$time; ?></td>
+            </tr>
+            <tr>
+                <td class = "shorter_td">留言人</td>
+                <td class = "longer_td"><?php echo $name; ?></td>
+            </tr>
+            <tr>
+                <td class = "shorter_td">联系方式</td>
+                <td class = "longer_td"><?php echo $contact; ?></td>
+            </tr>
+            <tr>
+                <td class = "shorter_td">留言内容</td>
+                <td class = "longer_td"><?php echo $content; ?></td>
+            </tr>
+        </table>
+    </div>
+    <h5>其他访客留言</h5>
+    <div id = "FormerPosts">
+        <?php
+        if(mysqli_num_rows($other_posts) > 0){
+            while($row = mysqli_fetch_assoc($other_posts)){?>
+                <div class = "PostLine">
+                    <table>
+                        <tr>
+                            <td class = "shorter_td">时间</td>
+                            <td class = "longer_td"><?php echo $row["day"]."    ".$row["time"]; ?></td>
+                        </tr>
+                        <tr>
+                            <td class = "shorter_td">留言人</td>
+                            <td class = "longer_td"><?php echo $row["name"]; ?></td>
+                        </tr>
+                        <tr>
+                            <td class = "shorter_td">联系方式</td>
+                            <td class = "longer_td"><?php echo $row["contact"]; ?></td>
+                        </tr>
+                        <tr>
+                            <td class = "shorter_td">留言内容</td>
+                            <td class = "longer_td"><?php echo $row["content"]; ?></td>
+                        </tr>
+                    </table>
+                </div>
+            <?php
+            }
+        }
+        ?>
+    </div>
+
 </html>

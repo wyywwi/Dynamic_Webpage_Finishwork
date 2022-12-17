@@ -1,4 +1,33 @@
 header{
     text-align: center;
     position:relative;
-  }
+}
+
+.shorter_td{
+  width: 175px;
+  vertical-align: sub;
+}
+
+#CurrentPost{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#FormerPosts{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.PostLine{
+  margin-bottom: 20px;
+}
+
+#PostSubmit{
+  margin-top:25px;
+  margin-bottom:15px;
+  text-align: left;
+}
+
+#PostAdmin{
+  margin-left:25px;
+}
