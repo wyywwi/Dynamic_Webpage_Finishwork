@@ -38,7 +38,7 @@ $other_posts = mysqli_query($conn, $output_sql);
     <h3>其他访客留言</h3>
     <div style="margin-top:50px; margin-bottom:25px;">
         <a href="./index.html">
-            <button>去写一份</button>
+            <button>返回写一份</button>
         </a>
     </div>
     <div id = "FormerPosts">

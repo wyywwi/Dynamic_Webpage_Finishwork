@@ -8,3 +8,14 @@ create table guestbook(
     contact text,
     content text
 );
+
+create table adminlist(
+    id int not null auto_increment primary key,
+    account text,
+    password text
+);
+
+FirstAdmin:
+    account:    admin_1
+    password:   admin_1_pass_wyywwi
+    encrypt:    hex(openssl_encrypt(aes_256_ecb))

@@ -22,12 +22,12 @@ header{
   margin-bottom: 20px;
 }
 
-#PostSubmit{
+#PostSubmit, #AdminLogin{
   margin-top:25px;
   margin-bottom:15px;
   text-align: left;
 }
 
-#PostAdmin{
+#PostAdmin, #AdminBack{
   margin-left:25px;
 }
