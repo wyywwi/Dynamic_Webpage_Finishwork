@@ -2,7 +2,7 @@
 $conn = mysqli_connect("localhost",'DynamicFinishWork','dynamic');
 mysqli_options($conn, MYSQLI_OPT_LOCAL_INFILE, true);
 $com = mysqli_query($conn,"use dynamic_zfy");
-$com2 = mysqli_query($conn,"load data local infile 'sh600000.txt' into table sh600000 fields terminated by ',' lines terminated by '\n' ;");
+//$com2 = mysqli_query($conn,"load data local infile 'sh600000.txt' into table sh600000 fields terminated by ',' lines terminated by '\n' ;");
 $stdata = mysqli_query($conn,"select * from sh600000 order by dt");
 $total = mysqli_num_rows($stdata);
 $i = 0;

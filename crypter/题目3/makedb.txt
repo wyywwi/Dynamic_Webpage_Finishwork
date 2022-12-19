@@ -1,6 +1,8 @@
-use mydb;
+use dynamic_zfy;
 
-create table s600105 (
+set global local_infile=on;
+
+create table sh600000 (
 number int,
 dt date,
 pop FLOAT(8,2),
