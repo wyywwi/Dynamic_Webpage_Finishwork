@@ -100,4 +100,8 @@ if($errorflag == 0){
         }, 1000)
     </script>
     <?php } ?>
+    <div class="bottomtab">
+        <a href="../index.html" style="color:#1d846e; margin-right: 20px;">梧桐叶落</a>
+        @wyywwi <a href="https://www.github.com/wyywwi" style="color:#1d846e; margin-left: 20px;">github</a>
+    </div>
 </html>

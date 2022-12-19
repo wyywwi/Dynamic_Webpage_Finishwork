@@ -31,3 +31,17 @@ header{
 #PostAdmin, #AdminBack{
   margin-left:25px;
 }
+
+.bottomtab{
+  margin: auto;
+  font-size: small;
+  color: rgb(56, 56, 56);
+  position: fixed;
+  /*绝对位置模式下居中：给元素确定大小，再给确定位置*/
+  right: 0;
+  left: 0;
+  /* top: 0; */
+  bottom: 0;
+  width: 200px;
+  height: 50px;
+}
