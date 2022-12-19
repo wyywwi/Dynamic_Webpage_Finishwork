@@ -107,6 +107,40 @@ $all_posters = mysqli_query($conn, $output_sql);
                 </div>
         <?php } ?>
     </div>
+    <h3>日留言统计</h3>
+    <?php
+    $output_sql = "select id,name,day from guestbook";
+    $all_posters = mysqli_query($conn, $output_sql);
+    ?>
+    <?php if(mysqli_num_rows($all_posters) > 0){?>
+    <?php
+        $lastdate = mysqli_fetch_assoc($all_posters)["day"];
+        $count = 1;
+        $row_count = 1;
+    ?>
+        <table>
+            <th>
+                <td>日期</td>
+                <td>留言人数</td>
+            </th>
+            <?php while($row = mysqli_fetch_assoc($all_posters)){
+            $date = $row["day"];
+            if ($date == $lastdate)
+                $count += 1;
+            else{ ?>
+            <tr>
+                <td><?php echo $row_count; ?></td>
+                <td><?php echo $row["day"]; ?></td>
+                <td><?php echo $count; ?></td>
+            </tr>
+            <?php
+                $row_count += 1;
+                $count = 1;
+                $lastdate = $date;
+            } ?>
+            <?php } ?>
+        </table>
+    <?php } ?>
     <h3>增加管理员</h3>
     <form method="post" action="adminadd.php">
         <table>
