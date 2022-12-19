@@ -130,7 +130,7 @@ $all_posters = mysqli_query($conn, $output_sql);
             else{ ?>
             <tr>
                 <td><?php echo $row_count; ?></td>
-                <td><?php echo $row["day"]; ?></td>
+                <td><?php echo $lastdate; ?></td>
                 <td><?php echo $count; ?></td>
             </tr>
             <?php
@@ -139,6 +139,11 @@ $all_posters = mysqli_query($conn, $output_sql);
                 $lastdate = $date;
             } ?>
             <?php } ?>
+            <tr>
+                <td><?php echo $row_count; ?></td>
+                <td><?php echo $lastdate; ?></td>
+                <td><?php echo $count; ?></td>
+            </tr>
         </table>
     <?php } ?>
     <h3>增加管理员</h3>
