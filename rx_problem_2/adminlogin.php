@@ -49,6 +49,7 @@ if($errorflag == 0){
 ?>
 
 <html>
+<head>
 <!--清除ErrorLog界面，开始写入显示内容-->
     <script>
         document.body.innerHTML = '';
@@ -57,6 +58,9 @@ if($errorflag == 0){
     <link rel="stylesheet" type="text/css" href="../normalize.css">
     <link rel="stylesheet" type="text/css" href="../sakura.css">
     <link rel="stylesheet" type="text/css" href="problem-2.css">
+    <script src="problem-2-action.js"></script>
+<!--5秒后跳转回主页面-->
+</head>
 <!--显示界面-->
     <h2>
         <?php
@@ -66,12 +70,34 @@ if($errorflag == 0){
                 echo "登录失败！";
         ?>
     </h2>
-    <h5>
-        <?php
-            if($errorflag == 0)
-                echo "5秒后转至管理界面. . .";
-            else
-                echo "5秒后返回登录界面. . .";
-        ?>
-    </h5>
+    <h5 id="AdminRelocate" ></h5>
+    <?php if($errorflag == 0){ ?>
+    <script>
+        let rel = document.getElementById("AdminRelocate");
+        var timer = 2;
+        setInterval(function () {
+            if (timer == 0) {
+                location.href = 'adminpage.php';
+            }
+            else {
+                rel.innerHTML = '' + timer + '秒后跳转至管理页面. . .';
+                timer--;
+            }
+        }, 1000)
+    </script>
+    <?php } else { ?>
+    <script>
+        let rel = document.getElementById("AdminRelocate");
+        var timer = 5;
+        setInterval(function () {
+            if (timer == 0) {
+                location.href = 'admin.html';
+            }
+            else {
+                rel.innerHTML = '' + timer + '秒后跳转回登录页面. . .';
+                timer--;
+            }
+        }, 1000)
+    </script>
+    <?php } ?>
 </html>

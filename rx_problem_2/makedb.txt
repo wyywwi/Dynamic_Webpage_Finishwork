@@ -17,5 +17,5 @@ create table adminlist(
 
 FirstAdmin:
     account:    admin_1
-    password:   admin_1_pass_wyywwi
+    password:   admin_1
     encrypt:    hex(openssl_encrypt(aes_256_ecb))
