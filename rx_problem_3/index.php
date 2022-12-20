@@ -74,6 +74,7 @@ function maxp_in_20($endday, $maxp)
         <title>日线图分析</title>
         <link rel="stylesheet" type="text/css" href="../normalize.css">
         <link rel="stylesheet" type="text/css" href="../sakura.css">
+        <link rel="stylesheet" type="text/css" href="../rx_problem_1/problem-1.css">
     </head>
     <body>
         <h1>sh600000</h1>
@@ -93,5 +94,9 @@ function maxp_in_20($endday, $maxp)
             </tr>
             <?php } ?>
         </table>
+        <div class="bottomtab" style="margin-top:30px; position:relative;">
+        <a href="../index.html" style="color:#1d846e; margin-right: 20px;">梧桐叶落</a>
+        @wyywwi <a href="https://www.github.com/wyywwi" style="color:#1d846e; margin-left: 20px;">github</a>
+    </div>
     </body>
 </html>
