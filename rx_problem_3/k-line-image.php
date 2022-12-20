@@ -37,14 +37,14 @@ $total = mysqli_num_rows($shdata);
 $im = imagecreatetruecolor(14000,3200);
 
 //数据参数
-$datenum = 682; //数据总量
+$datenum = 680; //数据总量
 $y_divide = 1; //y轴分量
 $y_unit = 200; //y轴单位长度
 $y_max = 15; //y轴最大值
 $x_divide = 1; //x轴分量
 $x_unit = 16; //x轴单位长度
 $x_sub_unit = 4;//x轴间隔长度
-$x_max = 682; //x轴最大值
+$x_max = 680; //x轴最大值
 
 // x 方向：681 * 10px = 6810 px
 // y 方向：15 * 100px = 1500px
@@ -53,17 +53,29 @@ $x_max = 682; //x轴最大值
 $red = imagecolorallocate($im,255,0,0);
 $green = imagecolorallocate($im,0,255,0);
 $blue = imagecolorallocate($im,0,0,255);
-
+$gray = imagecolorallocate($im,120,120,120);
+$white = imagecolorallocate($im,255,255,255);
 //作图
 //坐标变量
 $count = 0;
-$base_x = 0;
+$base_x = 100;
 $base_y = 3200;
 $rec_lb_x = 0;
 $rec_lb_y = 3200;
 $line_x = 0;
 $line_yh = 0;
 $line_yb = 3200;
+
+//数据变量（十日均线）
+$endp_all = range(0, mysqli_num_rows($shdata));
+
+//坐标线绘制
+for ($i = 0; $i < 70; $i++){
+    imageline($im,$base_x + ($i * 10 + 0.5) * ($x_sub_unit + $x_unit), $base_y, $base_x + ($i * 10 + 0.5) * ($x_sub_unit + $x_unit), $base_y - $y_unit * $y_max, $gray);
+}
+for ($i = 0; $i <= 15; $i++){
+    imageline($im,$base_x + 0.5 * ($x_sub_unit + $x_unit), $base_y - $y_unit * $i, $base_x + 690.5 * ($x_sub_unit + $x_unit), $base_y - $y_unit * $i, $white);
+}
 
 //循环
 while ($row = mysqli_fetch_assoc($shdata)) {
@@ -75,6 +87,8 @@ while ($row = mysqli_fetch_assoc($shdata)) {
     $endp = $row["endp"];
     $volume = $row["volume"];
     $amount = $row["amount"];
+    //十日均线数据
+    $endp_all[$count] = $row["endp"];
     //基座图像
     if($startp > $endp){
         imageline($im,$base_x + $count * ($x_sub_unit + $x_unit) + 0.5 * ($x_sub_unit + $x_unit), $base_y, $base_x + $count * ($x_sub_unit + $x_unit) + 0.5 * ($x_sub_unit + $x_unit), $base_y - 50, $green);
@@ -97,6 +111,26 @@ while ($row = mysqli_fetch_assoc($shdata)) {
         imagefilledrectangle($im,$base_x + $count * ($x_sub_unit + $x_unit) + 0.5 * $x_sub_unit, $base_y - ($startp * $y_unit), $base_x + $count * ($x_sub_unit + $x_unit) + $x_unit + 0.5 * $x_sub_unit, $base_y - ($endp * $y_unit), $red);
     }
     $count += 1;
+}
+
+//十日均线绘制
+for ($i = 11; $i < $total; $i++){
+    $average_1 = 0;
+    for($j = 1; $j < 11; $j++){
+        $average_1 += $endp_all[$i - $j];
+    }
+    $average_1 = $average_1 / 10;
+
+    $average_2 = 0;
+    for($j = 1; $j < 11; $j++){
+        $average_2 += $endp_all[$i + 1 - $j];
+    }
+    $average_2 = $average_2 / 10;
+
+    imageline($im, $base_x + ($i - 0.5) * ($x_sub_unit + $x_unit), $base_y - ($average_1 * $y_unit), $base_x + $i * ($x_sub_unit + $x_unit) + 0.5 * ($x_sub_unit + $x_unit), $base_y - ($average_2 * $y_unit), $red);
+    //加粗
+    imageline($im, $base_x + ($i - 0.5) * ($x_sub_unit + $x_unit), $base_y - ($average_1 * $y_unit) + 1, $base_x + $i * ($x_sub_unit + $x_unit) + 0.5 * ($x_sub_unit + $x_unit), $base_y - ($average_2 * $y_unit) + 1, $red);
+    imageline($im, $base_x + ($i - 0.5) * ($x_sub_unit + $x_unit), $base_y - ($average_1 * $y_unit) - 1, $base_x + $i * ($x_sub_unit + $x_unit) + 0.5 * ($x_sub_unit + $x_unit), $base_y - ($average_2 * $y_unit) - 1, $red);
 }
 
 //输出图像
