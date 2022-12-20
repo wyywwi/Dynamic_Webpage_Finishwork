@@ -6,9 +6,9 @@ $passwd = $_POST['admininfo'];
 $salt = base_convert(strlen($passwd) * strlen($account) * 7, 10, 5);
 
 //其他信息
-$servername = 'localhost';
+//$servername = 'localhost';
 //For Server side
-//$username = '43.142.12.69';
+$username = '43.142.12.69';
 $username = 'DynamicFinishWork';
 $password = 'dynamic';
 $errorflag = 0;

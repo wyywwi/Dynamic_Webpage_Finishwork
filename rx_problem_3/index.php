@@ -2,9 +2,9 @@
 //数据库相关
 
 //数据库变量
-$servername = 'localhost';
+//$servername = 'localhost';
 //For Server side
-//$username = '43.142.12.69';
+$username = '43.142.12.69';
 $username = 'DynamicFinishWork';
 $password = 'dynamic';
 $errorflag = 0;

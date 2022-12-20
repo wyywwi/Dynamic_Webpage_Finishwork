@@ -24,9 +24,9 @@ if($url_parse["path"] != "/rx_problem_2/adminlogin.php"
 
 
 //数据库信息
-$servername = 'localhost';
+//$servername = 'localhost';
 //For Server side
-//$username = '43.142.12.69';
+$username = '43.142.12.69';
 $username = 'DynamicFinishWork';
 $password = 'dynamic';
 $errorflag = 0;

@@ -1,7 +1,9 @@
 <?php
 
-
-//登录信息
+//数据库信息
+//$servername = 'localhost';
+//For Server side
+$username = '43.142.12.69';
 $username = 'DynamicFinishWork';
 $password = 'dynamic';
 $errorflag = 0;

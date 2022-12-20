@@ -16,6 +16,7 @@ create table adminlist(
 );
 
 FirstAdmin:
-    account:    admin_1
-    password:   admin_1
-    encrypt:    hex(openssl_encrypt(aes_256_ecb))
+    account:        admin_1
+    password:       admin_1
+    enc_password:   4f50454c2b6f4f5a32595766692f50754152492f62513d3d
+    encrypt:        hex(openssl_encrypt(aes_256_ecb))

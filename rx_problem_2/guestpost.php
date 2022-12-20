@@ -8,9 +8,9 @@ $content = $_POST['guesttext'];
 //其他信息
 $day = date("Y-m-d");
 $time = date("H:i:s");
-$servername = 'localhost';
+//$servername = 'localhost';
 //For Server side
-//$username = '43.142.12.69';
+$username = '43.142.12.69';
 $username = 'DynamicFinishWork';
 $password = 'dynamic';
 $errorflag = 0;
