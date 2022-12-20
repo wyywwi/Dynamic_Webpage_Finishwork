@@ -2,9 +2,9 @@
 //数据库相关
 
 //数据库变量
-//$servername = 'localhost';
+$servername = 'localhost';
 //For Server side
-$username = '43.142.12.69';
+//$username = '43.142.12.69';
 $username = 'DynamicFinishWork';
 $password = 'dynamic';
 $errorflag = 0;
@@ -74,6 +74,7 @@ function maxp_in_20($endday, $maxp)
         <title>日线图分析</title>
         <link rel="stylesheet" type="text/css" href="../normalize.css">
         <link rel="stylesheet" type="text/css" href="../sakura.css">
+        <link rel="stylesheet" type="text/css" href="../rx_problem_1/problem-1.css">
     </head>
     <body>
         <h1>sh600000</h1>
@@ -93,5 +94,12 @@ function maxp_in_20($endday, $maxp)
             </tr>
             <?php } ?>
         </table>
+        <div class="bottomtab" style="position:relative">
+            <a href="../index.html" style="color:#1d846e; margin-right: 20px; margin-left: 10px;">梧桐叶落</a>
+            @wyywwi <a href="https://www.github.com/wyywwi" style="color:#1d846e; margin-left: 20px; margin-bottom: 20px;">github</a>
+            <div style="width:300px; margin:0 0; padding:0 0;">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36072702000161" style="display:inline-block;height:20px;line-height:20px;"><img src="../sources/备案图标.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;color:#939393;">赣公网安备 36072702000161号  </p></a>
+            </div>
+        </div>
     </body>
 </html>
