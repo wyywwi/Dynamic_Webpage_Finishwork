@@ -1,7 +1,5 @@
 CREATE USER DynamicFinishWork identified by 'dynamic';
 
 CREATE DATABASE dynamic_wyywwi;
-CREATE DATABASE dynamic_zfy;
 
 GRANT SELECT,DELETE,UPDATE,CREATE,INSERT ON dynamic_wyywwi.* TO DynamicFinishWork@'%';
-GRANT SELECT,DELETE,UPDATE,CREATE,INSERT ON dynamic_zfy.* TO DynamicFinishWork@'%';
